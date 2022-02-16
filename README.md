@@ -2,7 +2,7 @@
 
 1. [ ] JVM 이해하기
    1. [x] 강좌 문서
-   2. [ ] 자바, JVM, JDK 그리고 JRE
+   2. [x] [자바, JVM, JDK 그리고 JRE](https://github.com/hongmoSung/the-java/blob/main/Doc/ch01/jvm-jdk-jre.md)
    3. [ ] JVM 구조
    4. [ ] 클래스 로더
 2. [ ] 바이트코드 조작
