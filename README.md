@@ -1,12 +1,12 @@
 # 더 자바, 코드를 조작하는 다양한 방법
 
-1. [ ] JVM 이해하기
+1. [x] JVM 이해하기
    1. [x] 강좌 문서
-   2. [x] [자바, JVM, JDK 그리고 JRE](https://github.com/hongmoSung/the-java/blob/main/Doc/ch01/jvm-jdk-jre.md)
-   3. [x] [JVM 구조](https://github.com/hongmoSung/the-java/blob/main/Doc/ch01/jvm-structure.md)
-   4. [x] [클래스 로더](https://github.com/hongmoSung/the-java/blob/main/Doc/ch01/class-loader.md)
+   2. [x] [자바, JVM, JDK 그리고 JRE](https://github.com/hongmoSung/the-java/blob/main/doc/ch01/jvm-jdk-jre.md)
+   3. [x] [JVM 구조](https://github.com/hongmoSung/the-java/blob/main/doc/ch01/jvm-structure.md)
+   4. [x] [클래스 로더](https://github.com/hongmoSung/the-java/blob/main/doc/ch01/class-loader.md)
 2. [ ] 바이트코드 조작
-   1. [ ] 코드 커버리지는 어떻게 측정할까?
+   1. [x] [코드 커버리지는 어떻게 측정할까?](https://github.com/hongmoSung/the-java/blob/main/doc/ch02/code-coverage.md)
    2. [ ] 모자에서 토끼를 꺼내는 마술
    3. [ ] javaagent 실습
    4. [ ] 바이트코드 조작 정리
