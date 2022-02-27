@@ -5,6 +5,10 @@ import net.bytebuddy.implementation.FixedValue;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 import static net.bytebuddy.matcher.ElementMatchers.named;
 
@@ -12,23 +16,15 @@ import static net.bytebuddy.matcher.ElementMatchers.named;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-/*
-        ClassLoader classLoader = App.class.getClassLoader();
-        System.out.println(classLoader);
-        System.out.println(classLoader.getParent());
-        System.out.println(classLoader.getParent().getParent());
-*/
-        try {
-            new ByteBuddy().redefine(Moja.class)
-                    .method(named("pullOut")).intercept(FixedValue.value("Rabbit!"))
-                    .make().saveIn(new File("/Users/hm.sung/study/the-java/target/classes/"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(new Moja().pullOut());
+public class App {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
+
+        final Class<?> bookClass = Class.forName("me.whiteship.Book");
+        final Constructor<?> constructor = bookClass.getConstructor(null);
+
+        final Book book = (Book) constructor.newInstance();
+        final Method f = Book.class.getDeclaredMethod("f");
+        f.setAccessible(true);
+        f.invoke(book);
     }
 }
